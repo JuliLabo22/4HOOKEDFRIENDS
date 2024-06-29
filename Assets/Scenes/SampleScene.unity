@@ -743,11 +743,11 @@ PrefabInstance:
     - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
     - target: {fileID: 6249142800614607731, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: ROJO
@@ -830,14 +830,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 331671594}
     m_Modifications:
-    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249142800614607731, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: VERDE
@@ -861,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 6249142800614607742, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1408009439, guid: b99b963561096694a867716227a7077e, type: 3}
+      objectReference: {fileID: 1614060535, guid: b99b963561096694a867716227a7077e, type: 3}
     - target: {fileID: 6249142800614607743, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1007,7 +999,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 743583352}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1286,11 +1278,11 @@ PrefabInstance:
     - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
     - target: {fileID: 6249142800614607731, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: AMARILLO
@@ -1502,11 +1494,11 @@ PrefabInstance:
     - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
     - target: {fileID: 6249142800614607731, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: AZUL
