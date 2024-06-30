@@ -56,9 +56,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if(!CanJump()) return;
+        if (!CanJump()) return;
 
-        if (Input.GetKeyDown(jumpInput)) rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if (Input.GetKeyDown(jumpInput))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 
     private bool CanJump()
