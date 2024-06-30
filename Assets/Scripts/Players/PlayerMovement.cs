@@ -19,11 +19,13 @@ public class PlayerMovement : MonoBehaviour
     //PRIVATES
     private Rigidbody2D rb;
     private SpriteRenderer sp;
+    private Animator am;                        ///te marque con las lineas verdes loq ue toque
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
+        am = GetComponent<Animator>();              ////
     }
 
     private void Update()
@@ -40,17 +42,33 @@ public class PlayerMovement : MonoBehaviour
         {
             sp.flipX = false;
             rb.velocity = new Vector2(-1 * movementSpeed, rb.velocity.y);
+            am.SetBool("iddle", false);                 ///
+            am.SetBool("corrida", true);                ///
+           
         }
 
         if (Input.GetKey(rightInput))
         {
             sp.flipX = true;
             rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+            am.SetBool("iddle", false);                                 ///
+            am.SetBool("corrida", true);                                ///
+           
         }
-
-        if (Input.GetKeyUp(leftInput)) rb.velocity = new Vector2(0, rb.velocity.y);
-        if (Input.GetKeyUp(rightInput)) rb.velocity = new Vector2(0, rb.velocity.y);
-
+        
+        if (Input.GetKeyUp(leftInput))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);        ///te cambie esta parte porque queria agregarle la animacionjeje
+            am.SetBool("corrida", false);                       ///estaba todo en la misma linea nomas le agregue el animator
+            am.SetBool("iddle", true);                          ///si esta mal cambialo we
+        }
+        if (Input.GetKeyUp(rightInput))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            am.SetBool("corrida", false);                       ///
+            am.SetBool("iddle", true);                          ///
+        }
+       
         Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.75f, Color.blue);
     }
 
