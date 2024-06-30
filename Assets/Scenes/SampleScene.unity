@@ -1596,6 +1596,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 331671594}
     m_Modifications:
     - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
@@ -1612,6 +1616,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 8d7d06186c51c2c48b16f02f2f3be9c6, type: 2}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: jumpForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: jumpInput
       value: 116
       objectReference: {fileID: 0}
@@ -1622,6 +1630,10 @@ PrefabInstance:
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: rightInput
       value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: movementSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607742, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Sprite
@@ -1685,6 +1697,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 331671594}
     m_Modifications:
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: VERDE
@@ -1693,6 +1709,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2fbab3120f7e627498f4d76462d154d8, type: 2}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: jumpForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: jumpInput
       value: 105
@@ -1704,6 +1724,10 @@ PrefabInstance:
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: rightInput
       value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: movementSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607742, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Sprite
@@ -2234,6 +2258,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 331671594}
     m_Modifications:
     - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
@@ -2244,6 +2272,14 @@ PrefabInstance:
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: AMARILLO
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: jumpForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: movementSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607742, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_FlipX
@@ -2458,6 +2494,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 331671594}
     m_Modifications:
     - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
@@ -2474,6 +2514,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 7aa05e08277937741b46a7dd8081b9cd, type: 2}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: jumpForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: jumpInput
       value: 264
       objectReference: {fileID: 0}
@@ -2484,6 +2528,10 @@ PrefabInstance:
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: rightInput
       value: 262
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: movementSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607742, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Sprite
