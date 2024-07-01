@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5743019433758486764}
   - component: {fileID: 635849100583216016}
+  - component: {fileID: 3210980769216551889}
   m_Layer: 8
   m_Name: HeadCol
   m_TagString: Untagged
@@ -48,6 +49,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.009781626, y: 0.4566699}
   m_Size: {x: 2.8283324, y: 2.4464173}
   m_Direction: 1
+--- !u!61 &3210980769216551889
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622560143909303655}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.98970747}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7194915, y: 1.3299022}
+  m_EdgeRadius: 0
 --- !u!1 &622560144760991853
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5743019434534647270}
   - component: {fileID: 635849100831450778}
+  - component: {fileID: 2927840794476405772}
   m_Layer: 8
   m_Name: HeadCol
   m_TagString: Untagged
@@ -96,6 +124,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.009781626, y: 0.4566699}
   m_Size: {x: 2.8283324, y: 2.4464173}
   m_Direction: 1
+--- !u!61 &2927840794476405772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622560144760991853}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.98970747}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7194915, y: 1.3299022}
+  m_EdgeRadius: 0
 --- !u!1 &4380656433437297533
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +303,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -268,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpForce: 30
+  jumpForce: 600
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -323,6 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4380656433532672952}
   - component: {fileID: 4380656433532672955}
+  - component: {fileID: 2127006424578108202}
   m_Layer: 8
   m_Name: HeadCol
   m_TagString: Untagged
@@ -361,6 +416,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.009781626, y: 0.4566699}
   m_Size: {x: 2.8283324, y: 2.4464173}
   m_Direction: 1
+--- !u!61 &2127006424578108202
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380656433532672953}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.98970747}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7194915, y: 1.3299022}
+  m_EdgeRadius: 0
 --- !u!1 &4380656433828091526
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4380656433828091521}
   - component: {fileID: 4380656433828091520}
+  - component: {fileID: 6951512248695028098}
   m_Layer: 8
   m_Name: HeadCol
   m_TagString: Untagged
@@ -409,6 +491,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.009781626, y: 0.4566699}
   m_Size: {x: 2.8283324, y: 2.4464173}
   m_Direction: 1
+--- !u!61 &6951512248695028098
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380656433828091526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.98970747}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7194915, y: 1.3299022}
+  m_EdgeRadius: 0
 --- !u!1 &4380656434349764818
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +820,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -731,7 +839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpForce: 30
+  jumpForce: 600
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1026,7 +1134,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1045,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpForce: 30
+  jumpForce: 600
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1242,7 +1350,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1261,7 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpForce: 30
+  jumpForce: 600
   layerMask:
     serializedVersion: 2
     m_Bits: 64

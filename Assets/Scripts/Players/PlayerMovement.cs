@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isReallyOnAir = false;
     private float timeToIsOnAir;
     private float timeCanMoveOnAir;
+    private bool hasJumped;
+    private float jumpTimeAnim;
 
     private void Awake()
     {
@@ -47,6 +49,38 @@ public class PlayerMovement : MonoBehaviour
             {
                 isReallyOnAir = true;
             }
+        }
+
+        if ((Input.GetKey(leftInput) || Input.GetKey(rightInput)) && !isOnAir && !hasJumped)
+        {
+            am.SetBool("corrida", true);
+            am.SetBool("iddle", false);
+            am.SetBool("jump", false);
+        }
+
+        if (Input.GetKeyUp(leftInput) || Input.GetKeyUp(rightInput))
+        {
+            am.SetBool("corrida", false);
+            am.SetBool("iddle", true);
+            am.SetBool("jump", false);
+        }
+
+        if (Input.GetKeyDown(jumpInput))
+        {
+            am.SetBool("jump", true);
+            am.SetBool("iddle", false);
+            am.SetBool("corrida", false);
+
+            hasJumped = true;
+        }
+
+        if (hasJumped)
+        {
+            jumpTimeAnim += Time.deltaTime;
+        }
+        else
+        {
+            jumpTimeAnim = 0;
         }
     }
 
@@ -78,18 +112,7 @@ public class PlayerMovement : MonoBehaviour
                 timeCanMoveOnAir = 0;
             }
 
-            if (Input.GetKeyUp(leftInput))
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);        
-                am.SetBool("corrida", false);                       
-                am.SetBool("iddle", true);                          
-            }
-            if (Input.GetKeyUp(rightInput))
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-                am.SetBool("corrida", false);                       
-                am.SetBool("iddle", true);                          
-            }
+            if (Input.GetKeyUp(leftInput) || Input.GetKeyUp(rightInput)) rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
 
@@ -101,8 +124,6 @@ public class PlayerMovement : MonoBehaviour
         {
             sp.flipX = false;
             rb.velocity = new Vector2(-1 * movementSpeed, rb.velocity.y);
-            am.SetBool("iddle", false);                 ///
-            am.SetBool("corrida", true);                ///
 
         }
 
@@ -110,25 +131,11 @@ public class PlayerMovement : MonoBehaviour
         {
             sp.flipX = true;
             rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
-            am.SetBool("iddle", false);                                 ///
-            am.SetBool("corrida", true);                                ///
-
         }
 
-        if (Input.GetKeyUp(leftInput))
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);        ///te cambie esta parte porque queria agregarle la animacionjeje
-            am.SetBool("corrida", false);                       ///estaba todo en la misma linea nomas le agregue el animator
-            am.SetBool("iddle", true);                          ///si esta mal cambialo we
-        }
-        if (Input.GetKeyUp(rightInput))
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            am.SetBool("corrida", false);                       ///
-            am.SetBool("iddle", true);                          ///
-        }
+        if (Input.GetKeyUp(leftInput) || Input.GetKeyUp(rightInput)) rb.velocity = new Vector2(0, rb.velocity.y);
 
-        Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.75f, Color.blue);
+        Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.5f, Color.blue);
     }
 
     private void Jump()
@@ -139,7 +146,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
-            am.SetBool("jump", true);
         }
     }
 
@@ -147,14 +153,22 @@ public class PlayerMovement : MonoBehaviour
     {
         var canjump = false;
 
-        if (Physics2D.Raycast(transform.position, Vector2.down, 0.75f, layerMask))
+        if (Physics2D.Raycast(transform.position, Vector2.down, 0.5f, layerMask))
         {
             canjump = true;
             isOnAir = false;
             isReallyOnAir = false;
             timeToIsOnAir = 0;
-            am.SetBool("jump", false);
+
             timeCanMoveOnAir = 0;
+
+            if (jumpTimeAnim > 0.1f)
+            {
+                jumpTimeAnim = 0;
+                hasJumped = false;
+                am.SetBool("iddle", true);
+                am.SetBool("jump", false);
+            }
         }
         else isOnAir = true;
 
