@@ -20,7 +20,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sp;
     private Animator am;                        //te marque con las lineas verdes loq ue toque
-    
+
+    private bool isOnAir = false;
+    private bool isReallyOnAir = false;
+    private float timeToIsOnAir;
+    private float timeCanMoveOnAir;
 
     private void Awake()
     {
@@ -31,21 +35,62 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Movement();
+        if (!isReallyOnAir) Movement();
+        else MovementOnAir();
         Jump();
+
+        if (isOnAir)
+        {
+            timeToIsOnAir += Time.deltaTime;
+
+            if (timeToIsOnAir >= 0.8f)
+            {
+                isReallyOnAir = true;
+            }
+        }
     }
 
     #region MOVEMENT AND JUMP
 
+    private void MovementOnAir()
+    {
+        rb.drag = 0;
+
+        timeCanMoveOnAir += Time.deltaTime;
+
+        if (timeCanMoveOnAir <= 0.3f) return;
+
+        if (!CanJump())
+        {
+            if (Input.GetKeyDown(leftInput))
+            {
+                sp.flipX = false;
+                rb.AddForce(Vector2.left * 10, ForceMode2D.Impulse);
+
+                timeCanMoveOnAir = 0;
+            }
+
+            if (Input.GetKeyDown(rightInput))
+            {
+                sp.flipX = true;
+                rb.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
+
+                timeCanMoveOnAir = 0;
+            }
+        }
+    }
+
     private void Movement()
     {
+        rb.drag = 8;
+
         if (Input.GetKey(leftInput))
         {
             sp.flipX = false;
             rb.velocity = new Vector2(-1 * movementSpeed, rb.velocity.y);
             am.SetBool("iddle", false);                 ///
             am.SetBool("corrida", true);                ///
-           
+
         }
 
         if (Input.GetKey(rightInput))
@@ -54,9 +99,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
             am.SetBool("iddle", false);                                 ///
             am.SetBool("corrida", true);                                ///
-           
+
         }
-        
+
         if (Input.GetKeyUp(leftInput))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);        ///te cambie esta parte porque queria agregarle la animacionjeje
@@ -69,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
             am.SetBool("corrida", false);                       ///
             am.SetBool("iddle", true);                          ///
         }
-       
+
         Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.75f, Color.blue);
     }
 
@@ -88,7 +133,16 @@ public class PlayerMovement : MonoBehaviour
     {
         var canjump = false;
 
-        if (Physics2D.Raycast(transform.position, Vector2.down, 0.75f, layerMask)) canjump = true;
+        if (Physics2D.Raycast(transform.position, Vector2.down, 0.75f, layerMask))
+        {
+            canjump = true;
+            isOnAir = false;
+            isReallyOnAir = false;
+            timeToIsOnAir = 0;
+
+            timeCanMoveOnAir = 0;
+        }
+        else isOnAir = true;
 
         return canjump;
     }

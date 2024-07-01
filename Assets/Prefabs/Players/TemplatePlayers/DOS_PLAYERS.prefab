@@ -40,6 +40,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3877197763206623201}
     m_Modifications:
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -167,6 +175,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3877197763206623201}
     m_Modifications:
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249142800614607730, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607737, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: m_Name
       value: Player (1)
