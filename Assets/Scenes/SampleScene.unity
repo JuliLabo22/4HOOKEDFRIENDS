@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0bd64f000d4864dba747c0f0221bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCounter: 2
+  playerCounter: 4
   templates:
   - id: 2
     prefabTemplatePlayers: {fileID: 3877197763206623202, guid: 6648b02fcb4c64244a5e03e212a8e2e6, type: 3}
