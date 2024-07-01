@@ -2529,7 +2529,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 281053317}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
         m_MethodName: ResetScene
         m_Mode: 1

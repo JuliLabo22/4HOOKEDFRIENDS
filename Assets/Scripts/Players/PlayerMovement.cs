@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         {
             timeToIsOnAir += Time.deltaTime;
 
-            if (timeToIsOnAir >= 0.8f)
+            if (timeToIsOnAir >= 0.3f)
             {
                 isReallyOnAir = true;
             }
@@ -76,6 +76,19 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
 
                 timeCanMoveOnAir = 0;
+            }
+
+            if (Input.GetKeyUp(leftInput))
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);        
+                am.SetBool("corrida", false);                       
+                am.SetBool("iddle", true);                          
+            }
+            if (Input.GetKeyUp(rightInput))
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                am.SetBool("corrida", false);                       
+                am.SetBool("iddle", true);                          
             }
         }
     }
