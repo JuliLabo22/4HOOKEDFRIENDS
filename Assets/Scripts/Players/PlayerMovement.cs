@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     //PRIVATES
     private Rigidbody2D rb;
     private SpriteRenderer sp;
-    private Animator am;                        ///te marque con las lineas verdes loq ue toque
+    private Animator am;                        //te marque con las lineas verdes loq ue toque
+    
 
     private void Awake()
     {

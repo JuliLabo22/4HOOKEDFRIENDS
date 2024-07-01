@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6249142800614607743}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &3754254632286234044
 CapsuleCollider2D:
@@ -45,8 +45,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000055605394, y: 0.4664519}
-  m_Size: {x: 3.0239549, y: 2.4072778}
+  m_Offset: {x: 0.009781626, y: 0.4566699}
+  m_Size: {x: 2.8283324, y: 2.4464173}
   m_Direction: 1
 --- !u!1 &6249142800614607737
 GameObject:
@@ -81,8 +81,8 @@ Transform:
   m_LocalScale: {x: 0.27907315, y: 0.27907315, z: 0.27907315}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8320534926136735424}
   - {fileID: 8079722029760097364}
+  - {fileID: 8320534926136735424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -127,7 +127,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -30909755, guid: f56c7e4830dc6cb4fb62225eecf6739e, type: 3}
+  m_Sprite: {fileID: 1031921306, guid: 1f6c04cebfa84464ca0a56b906bef677, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,7 +148,7 @@ Animator:
   m_GameObject: {fileID: 6249142800614607737}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6fb3f88d5bdfb3a4bbb35d3f115d55ec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7aa05e08277937741b46a7dd8081b9cd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -217,14 +217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ca826bfc77c994da9baa9662f880e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 8
+  movementSpeed: 6
   jumpForce: 30
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  leftInput: 97
-  rightInput: 100
-  jumpInput: 119
+  leftInput: 260
+  rightInput: 262
+  jumpInput: 264
 --- !u!1 &6908026619196888152
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6249142800614607743}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6925680256492155566
 BoxCollider2D:

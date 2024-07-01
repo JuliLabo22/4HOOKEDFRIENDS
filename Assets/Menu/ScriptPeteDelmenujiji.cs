@@ -25,18 +25,18 @@ public class ScriptPeteDelmenujiji : MonoBehaviour
         }
 
 
-            tiemponegro -= Time.deltaTime;
+        tiemponegro -= Time.deltaTime;
         tiempo += Time.deltaTime;
 
-        if(tiempo>0.5f)
+        if (tiempo > 0.5f)
         {
             start.SetActive(false);
         }
-        if(tiempo>1)
+        if (tiempo > 1)
         {
             tiempo = 0;
         }
-        if(tiempo<0.5f)
+        if (tiempo < 0.5f)
         {
             start.SetActive(true);
         }
