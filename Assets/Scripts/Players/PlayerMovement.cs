@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         if (isOnAir)
         {
             timeToIsOnAir += Time.deltaTime;
+            am.SetBool("jump", true);   ///lo puse aca
 
             if (timeToIsOnAir >= 0.3f)
             {
@@ -67,16 +68,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(jumpInput))
         {
-            am.SetBool("jump", true);
+            
             am.SetBool("iddle", false);
             am.SetBool("corrida", false);
-
+            ///estaba aca el anim de saltar
             hasJumped = true;
         }
 
         if (hasJumped)
         {
             jumpTimeAnim += Time.deltaTime;
+
         }
         else
         {
@@ -152,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
     private bool CanJump()
     {
         var canjump = false;
-
+        am.SetBool("jump", false);///y puse esto
         if (Physics2D.Raycast(transform.position, Vector2.down, 0.5f, layerMask))
         {
             canjump = true;
