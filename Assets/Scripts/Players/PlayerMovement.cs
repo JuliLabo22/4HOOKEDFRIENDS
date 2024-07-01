@@ -138,7 +138,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(jumpInput))
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
+            am.SetBool("jump", true);
         }
     }
 
@@ -152,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
             isOnAir = false;
             isReallyOnAir = false;
             timeToIsOnAir = 0;
-
+            am.SetBool("jump", false);
             timeCanMoveOnAir = 0;
         }
         else isOnAir = true;
