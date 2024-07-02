@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -33,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
         am = GetComponent<Animator>();              ////
+
+        am.SetBool("iddle", true);
     }
 
     private void Update()
@@ -46,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             timeToIsOnAir += Time.deltaTime;
             am.SetBool("jump", true);   ///lo puse aca
 
-            if (timeToIsOnAir >= 0.3f)
+            if (timeToIsOnAir >= 0.6f)
             {
                 isReallyOnAir = true;
             }
@@ -68,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(jumpInput))
         {
-            
+
             am.SetBool("iddle", false);
             am.SetBool("corrida", false);
             ///estaba aca el anim de saltar
@@ -137,7 +140,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyUp(leftInput) || Input.GetKeyUp(rightInput)) rb.velocity = new Vector2(0, rb.velocity.y);
 
-        Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.5f, Color.blue);
+        Debug.DrawLine(transform.position - new Vector3(0.15f, 0, 0), transform.position - new Vector3(0.15f, 0, 0) + Vector3.down * 0.5f, Color.blue);
+        Debug.DrawLine(transform.position + new Vector3(0.15f, 0, 0), transform.position + new Vector3(0.15f, 0, 0) + Vector3.down * 0.5f, Color.blue);
     }
 
     private void Jump()
@@ -155,7 +159,8 @@ public class PlayerMovement : MonoBehaviour
     {
         var canjump = false;
         am.SetBool("jump", false);///y puse esto
-        if (Physics2D.Raycast(transform.position, Vector2.down, 0.5f, layerMask))
+        if (Physics2D.Raycast(transform.position - new Vector3(0.15f, 0, 0), Vector2.down, 0.5f, layerMask) ||
+            Physics2D.Raycast(transform.position + new Vector3(0.15f, 0, 0), Vector2.down, 0.5f, layerMask))
         {
             canjump = true;
             isOnAir = false;
