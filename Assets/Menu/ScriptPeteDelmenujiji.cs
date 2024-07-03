@@ -9,10 +9,12 @@ public class ScriptPeteDelmenujiji : MonoBehaviour
     public SpriteRenderer negro;
     public float tiemponegro;
     public GameObject menu;
+    bool paso;
     // Start is called before the first frame update
     void Start()
     {
         tiemponegro = 1.5f;
+        paso = false;
     }
 
     // Update is called once per frame
@@ -21,11 +23,27 @@ public class ScriptPeteDelmenujiji : MonoBehaviour
 
         if (Input.anyKey)
         {
-            menu.SetActive(false);
+            
+            paso = true;
+        }
+        if (paso==false)
+        {
+            tiemponegro -= Time.deltaTime;
+            if(tiemponegro <= 0)
+            {
+                tiemponegro = 0;
+            }
+        }
+        if(paso==true)
+        {
+            tiemponegro += Time.deltaTime * 3;
+                if (tiemponegro >= 2)
+            {
+                menu.SetActive(false);
+            }
         }
 
-
-        tiemponegro -= Time.deltaTime;
+        
         tiempo += Time.deltaTime;
 
         if (tiempo > 0.5f)
@@ -41,6 +59,7 @@ public class ScriptPeteDelmenujiji : MonoBehaviour
             start.SetActive(true);
         }
         negro.color = new Color(1f, 1f, 1f, tiemponegro);
+        
 
     }
 }
