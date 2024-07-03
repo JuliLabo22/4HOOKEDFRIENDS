@@ -303,7 +303,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3.3
-  jumpForce: 700
+  jumpForce: 800
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -820,7 +820,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3.3
-  jumpForce: 700
+  jumpForce: 800
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1134,7 +1134,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3.3
-  jumpForce: 700
+  jumpForce: 800
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1350,7 +1350,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: eea7df576e4c50a428eab73fc78222cb, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3.3
-  jumpForce: 700
+  jumpForce: 800
   layerMask:
     serializedVersion: 2
     m_Bits: 64
