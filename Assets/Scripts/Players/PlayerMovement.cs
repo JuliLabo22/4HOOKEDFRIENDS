@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementOnAir()
     {
-        rb.drag = 0;
+        //rb.drag = 0;
 
         timeCanMoveOnAir += Time.deltaTime;
 
@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(leftInput))
             {
                 sp.flipX = false;
-                rb.AddForce(Vector2.left * 10, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.left * 20, ForceMode2D.Impulse);
 
                 timeCanMoveOnAir = 0;
             }
@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(rightInput))
             {
                 sp.flipX = true;
-                rb.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.right * 20, ForceMode2D.Impulse);
 
                 timeCanMoveOnAir = 0;
             }
@@ -123,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        rb.drag = 8;
+       // rb.drag = 8;
 
         if (Input.GetKey(leftInput))
         {
@@ -151,12 +151,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(jumpInput))
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
+            rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime);
         }
     }
 
     private bool CanJump()
     {
+       
         var canjump = false;
         am.SetBool("jump", false);///y puse esto
         if (Physics2D.Raycast(transform.position - new Vector3(0.15f, 0, 0), Vector2.down, 0.5f, layerMask) ||
