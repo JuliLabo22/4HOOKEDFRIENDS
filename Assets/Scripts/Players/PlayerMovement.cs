@@ -167,6 +167,8 @@ public class PlayerMovement : MonoBehaviour
             isReallyOnAir = false;
             timeToIsOnAir = 0;
 
+            if(isOnAir) rb.velocity = new Vector2(0, rb.velocity.y);
+
             timeCanMoveOnAir = 0;
 
             if (jumpTimeAnim > 0.1f)
