@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5743019433758486764
 Transform:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5743019434534647270
 Transform:
   m_ObjectHideFlags: 0
@@ -271,11 +271,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 4380656433437297533}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e378808bf9cb83f43b48ea415108f293, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15873486}
+  m_Offset: {x: -0.035364926, y: -0.1539849}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -286,7 +286,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3511415, y: 3.64399}
+  m_Size: {x: 2.487186, y: 3.6534898}
   m_EdgeRadius: 0
 --- !u!50 &4380656433437297534
 Rigidbody2D:
@@ -346,7 +346,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 3
+  m_Distance: 2.1
   m_MaxDistanceOnly: 1
 --- !u!232 &8064587664224177728
 DistanceJoint2D:
@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4380656433532672952
 Transform:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4380656433828091521
 Transform:
   m_ObjectHideFlags: 0
@@ -788,11 +788,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 4380656435347442930}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e378808bf9cb83f43b48ea415108f293, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15873486}
+  m_Offset: {x: -0.04218954, y: -0.17099977}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -803,7 +803,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3511415, y: 3.64399}
+  m_Size: {x: 2.4518962, y: 3.61946}
   m_EdgeRadius: 0
 --- !u!50 &4380656435347442943
 Rigidbody2D:
@@ -863,7 +863,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 3
+  m_Distance: 2.1
   m_MaxDistanceOnly: 1
 --- !u!1 &7139624110143230580
 GameObject:
@@ -1102,11 +1102,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 7670296012536449119}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e378808bf9cb83f43b48ea415108f293, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15873486}
+  m_Offset: {x: -0.017456532, y: -0.17973757}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1117,7 +1117,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3511415, y: 3.64399}
+  m_Size: {x: 2.4263077, y: 3.6019845}
   m_EdgeRadius: 0
 --- !u!50 &7670296012536449108
 Rigidbody2D:
@@ -1177,7 +1177,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 3
+  m_Distance: 2.1
   m_MaxDistanceOnly: 1
 --- !u!232 &1974060321184760633
 DistanceJoint2D:
@@ -1318,11 +1318,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 7670296012842880341}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e378808bf9cb83f43b48ea415108f293, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15873486}
+  m_Offset: {x: -0.050139785, y: -0.15980971}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1333,7 +1333,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3511415, y: 3.64399}
+  m_Size: {x: 2.323345, y: 3.6418402}
   m_EdgeRadius: 0
 --- !u!50 &7670296012842880350
 Rigidbody2D:
@@ -1393,5 +1393,5 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 3
+  m_Distance: 2.1
   m_MaxDistanceOnly: 1

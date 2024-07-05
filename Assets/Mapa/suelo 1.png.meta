@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1deb39d609df34e48b8d6be4515af053
+guid: 619f3582f85538248bd438c39f186f2e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suelofino2_0
+      name: suelo 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 289
-        height: 30
+        width: 73
+        height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13602f26af369b442bf2641310e9f3f4
-      internalID: -1139537964
+      spriteID: bc6393f707189684eace3b9eaac7db44
+      internalID: 1981439187
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      suelofino2_0: -1139537964
+      suelo 1_0: 1981439187
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

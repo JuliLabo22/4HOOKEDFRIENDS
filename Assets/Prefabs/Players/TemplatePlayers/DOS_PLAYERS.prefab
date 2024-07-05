@@ -263,7 +263,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 3
+  m_Distance: 2
   m_MaxDistanceOnly: 1
 --- !u!4 &7167470656567949389 stripped
 Transform:
@@ -303,15 +303,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: jumpInput
-      value: 116
+      value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: leftInput
-      value: 102
+      value: 276
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: rightInput
-      value: 104
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 6249142800614607741, guid: 5a32be224d9e17d44a18b53f9dccebd3, type: 3}
       propertyPath: movementSpeed
@@ -432,7 +432,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 3
+  m_Distance: 2
   m_MaxDistanceOnly: 1
 --- !u!4 &7167470656790494535 stripped
 Transform:

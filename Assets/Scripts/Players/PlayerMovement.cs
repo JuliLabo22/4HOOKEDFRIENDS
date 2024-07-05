@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(leftInput))
             {
                 sp.flipX = false;
-                rb.AddForce(Vector2.left * 20, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.left * 10, ForceMode2D.Impulse);
 
                 timeCanMoveOnAir = 0;
             }
@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(rightInput))
             {
                 sp.flipX = true;
-                rb.AddForce(Vector2.right * 20, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.right * 10, ForceMode2D.Impulse);
 
                 timeCanMoveOnAir = 0;
             }
