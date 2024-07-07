@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private LayerMask triggerColLayerMask;
 
     [Space]
     [Header("Inputs")]
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private float timeCanMoveOnAir;
     private bool hasJumped;
     private float jumpTimeAnim;
+    private bool cantmoveToRight;
+    private bool cantmovetoLeft;
 
     private void Awake()
     {
@@ -55,12 +58,20 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if ((Input.GetKey(leftInput) || Input.GetKey(rightInput)) && !isOnAir && !hasJumped)
+        if (Input.GetKey(rightInput) && !isOnAir && !hasJumped && !cantmoveToRight)
         {
             am.SetBool("corrida", true);
             am.SetBool("iddle", false);
             am.SetBool("jump", false);
         }
+
+        if (Input.GetKey(leftInput) && !isOnAir && !hasJumped && !cantmovetoLeft)
+        {
+            am.SetBool("corrida", true);
+            am.SetBool("iddle", false);
+            am.SetBool("jump", false);
+        }
+
 
         if (Input.GetKeyUp(leftInput) || Input.GetKeyUp(rightInput))
         {
@@ -68,6 +79,9 @@ public class PlayerMovement : MonoBehaviour
             am.SetBool("iddle", true);
             am.SetBool("jump", false);
         }
+
+        if(cantmovetoLeft || cantmoveToRight && rb.velocity.x == 0) 
+        am.SetBool("corrida", false);
 
         if (Input.GetKeyDown(jumpInput))
         {
@@ -123,25 +137,68 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-       // rb.drag = 8;
+        // rb.drag = 8;
 
-        if (Input.GetKey(leftInput))
-        {
-            sp.flipX = false;
-            rb.velocity = new Vector2(-1 * movementSpeed, rb.velocity.y);
+        cantmoveToRight = CanMoveToRight();
+        cantmovetoLeft = CanMoveToLeft();
 
-        }
-
-        if (Input.GetKey(rightInput))
+        if (Input.GetKey(rightInput) && !cantmoveToRight)
         {
             sp.flipX = true;
             rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+        }
+
+        if (Input.GetKey(leftInput) && !cantmovetoLeft)
+        {
+            sp.flipX = false;
+            rb.velocity = new Vector2(-1 * movementSpeed, rb.velocity.y);
         }
 
         if (Input.GetKeyUp(leftInput) || Input.GetKeyUp(rightInput)) rb.velocity = new Vector2(0, rb.velocity.y);
 
         Debug.DrawLine(transform.position - new Vector3(0.15f, 0, 0), transform.position - new Vector3(0.15f, 0, 0) + Vector3.down * 0.5f, Color.blue);
         Debug.DrawLine(transform.position + new Vector3(0.15f, 0, 0), transform.position + new Vector3(0.15f, 0, 0) + Vector3.down * 0.5f, Color.blue);
+    }
+
+    bool CanMoveToRight()
+    {
+        Debug.DrawRay(transform.position + new Vector3(0.3f, 0.3f, 0), Vector2.right * 0.2f, Color.blue);
+
+        RaycastHit2D rightRay = Physics2D.Raycast(transform.position + new Vector3(0.3f, 0.3f, 0), Vector2.right, 0.2f, triggerColLayerMask);
+
+        Debug.DrawRay(transform.position + new Vector3(0.3f, 0, 0) - new Vector3(0, 0.3f, 0), Vector2.right * 0.2f, Color.blue);
+
+        RaycastHit2D rightRay2 = Physics2D.Raycast(transform.position + new Vector3(0.3f, 0, 0) - new Vector3(0, 0.3f, 0), Vector2.right, 0.2f, triggerColLayerMask);
+
+        if ((rightRay.collider != null && !rightRay.collider.gameObject.Equals(gameObject)) || (rightRay2.collider != null && !rightRay2.collider.gameObject.Equals(gameObject)))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            am.SetBool("corrida", false);
+            am.SetBool("iddle", true);
+            return true;
+        }
+        else return false;
+    }
+
+    bool CanMoveToLeft()
+    {
+        Debug.DrawRay(transform.position - new Vector3(0.3f, 0.3f, 0), Vector2.left * 0.2f, Color.blue);
+
+        RaycastHit2D rightRay = Physics2D.Raycast(transform.position - new Vector3(0.3f, 0.3f, 0), Vector2.left, 0.2f, triggerColLayerMask);
+
+        Debug.DrawRay(transform.position - new Vector3(0.3f, 0, 0) + new Vector3(0, 0.3f, 0), Vector2.left * 0.2f, Color.blue);
+
+        RaycastHit2D rightRay2 = Physics2D.Raycast(transform.position - new Vector3(0.3f, 0, 0) + new Vector3(0, 0.3f, 0), Vector2.left, 0.2f, triggerColLayerMask);
+
+        if ((rightRay.collider != null && !rightRay.collider.gameObject.Equals(gameObject)) || (rightRay2.collider != null && !rightRay2.collider.gameObject.Equals(gameObject)))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            am.SetBool("corrida", false);
+            am.SetBool("iddle", true);
+
+            return true;
+        }
+        else return false;
     }
 
     private void Jump()
@@ -157,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanJump()
     {
-       
+
         var canjump = false;
         am.SetBool("jump", false);///y puse esto
         if (Physics2D.Raycast(transform.position - new Vector3(0.15f, 0, 0), Vector2.down, 0.5f, layerMask) ||
@@ -168,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
             isReallyOnAir = false;
             timeToIsOnAir = 0;
 
-            if(isOnAir) rb.velocity = new Vector2(0, rb.velocity.y);
+            if (isOnAir) rb.velocity = new Vector2(0, rb.velocity.y);
 
             timeCanMoveOnAir = 0;
 

@@ -326,6 +326,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  triggerColLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   leftInput: 106
   rightInput: 108
   jumpInput: 105
@@ -843,6 +846,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  triggerColLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   leftInput: 276
   rightInput: 275
   jumpInput: 273
@@ -1157,6 +1163,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  triggerColLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   leftInput: 102
   rightInput: 104
   jumpInput: 116
@@ -1373,6 +1382,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  triggerColLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   leftInput: 97
   rightInput: 100
   jumpInput: 119
